@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ImgLot</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  
+  <body>
+    <div class="header">Submit a unique image for a random one!</div>
+    <!-- Make ^^^ different each load?-->
+    <div class="main">
+      <form ref='imgUP' 
+	    id='imgUP' 
+	    action='/upload' 
+	    method='post' 
+	    encType="multipart/form-data">
+	<input type="checkbox" name="no-nsfw-result">NO NSFW responses from lottery</input> <br>
+        <input type="file" accept=".jpg,.jpeg,.png,.bmp,.tiff,.gif" name="userImage" /> <br>
+	<input type="checkbox" name="img-nsfw">Image contains NSFW content</input> <br>
+        <input type="submit" value="upload" />
+      </form>  
+    </div>
+  </body>
+</html>
