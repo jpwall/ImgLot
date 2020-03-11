@@ -69,7 +69,8 @@ router.post('/upload', function(expressReq, expressRes, next) {
 				 })
 			     });
 	    } else {
-		expressRes.status(200).send("There is a duplicate of your submitted image on the server! Please try again.");
+		//expressRes.status(200).send("There is a duplicate of your submitted image on the server! Please try again.");
+		expressRes.sendFile(baseDir + "error.png");
 	    }
 	}
     })

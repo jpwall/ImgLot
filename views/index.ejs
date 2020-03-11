@@ -6,7 +6,9 @@
   </head>
   
   <body>
-    <div class="header">Submit a unique image for a random one!</div>
+    <div class="header">
+      <img src="images/small.png" />
+    </div>
     <!-- Make ^^^ different each load?-->
     <div class="main">
       <form ref='imgUP' 
@@ -14,10 +16,25 @@
 	    action='/upload' 
 	    method='post' 
 	    encType="multipart/form-data">
-	<input type="checkbox" name="noNsfwResult">NO NSFW responses from lottery</input> <br>
-        <input type="file" accept=".jpg,.jpeg,.png,.bmp,.tiff,.gif" name="userImage" /> <br>
-	<input type="checkbox" name="imgNsfw">Image contains NSFW content</input> <br>
-        <input type="submit" value="upload" />
+	<div class="formContainer">
+	  <div class="explanation">Step 1: Submit a unique photo!</div>
+	  <div class="formItem">
+            <input type="file" accept=".jpg,.jpeg,.png,.bmp,.tiff,.gif" name="userImage" />
+	  </div>
+	  <div class="formItem">	    
+	    <input type="checkbox" name="imgNsfw" >Image contains NSFW content</input>
+	  </div>
+	</div>
+	<img src="images/rightArrow.png" widht="64" height="64" style="padding-left:30px;padding-right:30px;"/>
+	<div class="formContainer">
+	  <div class="explanation">Step 2: Get a random photo back!</div>
+	  <div class="formItem">	    
+	    <input type="checkbox" name="noNsfwResult">NO NSFW responses from lottery</input>
+	  </div>
+	  <div class="formItem">
+            <input type="submit" value="Get a Random Image!" />
+	  </div>
+	</div>
       </form>  
     </div>
   </body>
