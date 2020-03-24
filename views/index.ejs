@@ -17,9 +17,12 @@
 	    method='post' 
 	    encType="multipart/form-data">
 	<div class="formContainer">
-	  <div class="explanation">Step 1: Submit a unique photo!</div>
+	  <div class="explanation">Step 1: Submit a unique photo! *</div>
 	  <div class="formItem">
             <input type="file" accept=".jpg,.jpeg,.png,.bmp,.tiff,.gif" name="userImage" />
+	  </div>
+	  <div class="formItem" id="smallText">
+	    * Please keep image uploads under 4MB
 	  </div>
 	  <div class="formItem">	    
 	    <input type="checkbox" name="imgNsfw" >Image contains NSFW content</input>
